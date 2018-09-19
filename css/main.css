@@ -1823,7 +1823,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #2a539d;
+  background: #346559;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3123,6 +3123,8 @@ pre .javascript .function {
 }
 body {
   background: url("/images/shamo.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 .main-inner {
   opacity: 0.77;
