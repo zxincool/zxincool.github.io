@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next gemini use-motion" lang="">
+<html class="theme-next gemini use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="哈夫曼树," />
 
 
 
@@ -77,23 +77,24 @@
 
 
 
-<meta name="description" content="目录 哈夫曼树的构造 哈夫曼编码的构造   哈夫曼树的构造首先给出树的几个概念：  路径：从树种一个结点到另一个结点之间的分支构成这两个结点之间的路径，路径上的分支数目称作路径长度。 树的路径长度：从树根到每一个结点的路径长度之和。 结点的带权路径长度：为从该结点到树根的之间的路径长度与结点上权的成绩。 树的带权路径长度：为数中所有叶子结点的带权路径长度之和。     构建哈夫曼树的思想其实就是贪">
+<meta name="description" content="## 目录  哈夫曼树的构造 哈夫曼编码的构造   哈夫曼树的构造首先给出树的几个概念：  路径：从树种一个结点到另一个结点之间的分支构成这两个结点之间的路径，路径上的分支数目称作路径长度。 树的路径长度：从树根到每一个结点的路径长度之和。 结点的带权路径长度：为从该结点到树根的之间的路径长度与结点上权的成绩。 树的带权路径长度：为数中所有叶子结点的带权路径长度之和。     构建哈夫曼树的思想">
+<meta name="keywords" content="哈夫曼树">
 <meta property="og:type" content="article">
-<meta property="og:title" content="郑鑫的博客">
-<meta property="og:url" content="http://yoursite.com/2018/09/19/哈夫曼树和哈夫曼编码总结/index.html">
+<meta property="og:title" content="HafumanTree">
+<meta property="og:url" content="http://yoursite.com/2018/09/19/HafumanTree/index.html">
 <meta property="og:site_name" content="郑鑫的博客">
-<meta property="og:description" content="目录 哈夫曼树的构造 哈夫曼编码的构造   哈夫曼树的构造首先给出树的几个概念：  路径：从树种一个结点到另一个结点之间的分支构成这两个结点之间的路径，路径上的分支数目称作路径长度。 树的路径长度：从树根到每一个结点的路径长度之和。 结点的带权路径长度：为从该结点到树根的之间的路径长度与结点上权的成绩。 树的带权路径长度：为数中所有叶子结点的带权路径长度之和。     构建哈夫曼树的思想其实就是贪">
-<meta property="og:locale" content="default">
+<meta property="og:description" content="## 目录  哈夫曼树的构造 哈夫曼编码的构造   哈夫曼树的构造首先给出树的几个概念：  路径：从树种一个结点到另一个结点之间的分支构成这两个结点之间的路径，路径上的分支数目称作路径长度。 树的路径长度：从树根到每一个结点的路径长度之和。 结点的带权路径长度：为从该结点到树根的之间的路径长度与结点上权的成绩。 树的带权路径长度：为数中所有叶子结点的带权路径长度之和。     构建哈夫曼树的思想">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://img-blog.csdn.net/20180917162949689?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p4enh6eDAxMTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
 <meta property="og:image" content="https://img-blog.csdn.net/20180917163338269?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p4enh6eDAxMTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
 <meta property="og:image" content="https://img-blog.csdn.net/20180917164635355?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p4enh6eDAxMTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
 <meta property="og:image" content="https://img-blog.csdn.net/20180917164844271?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p4enh6eDAxMTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
 <meta property="og:image" content="https://img-blog.csdn.net/20180917181139872?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p4enh6eDAxMTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
 <meta property="og:image" content="https://img-blog.csdn.net/20180917180525113?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p4enh6eDAxMTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
-<meta property="og:updated_time" content="2018-09-19T13:05:15.857Z">
+<meta property="og:updated_time" content="2018-09-19T15:04:00.098Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="郑鑫的博客">
-<meta name="twitter:description" content="目录 哈夫曼树的构造 哈夫曼编码的构造   哈夫曼树的构造首先给出树的几个概念：  路径：从树种一个结点到另一个结点之间的分支构成这两个结点之间的路径，路径上的分支数目称作路径长度。 树的路径长度：从树根到每一个结点的路径长度之和。 结点的带权路径长度：为从该结点到树根的之间的路径长度与结点上权的成绩。 树的带权路径长度：为数中所有叶子结点的带权路径长度之和。     构建哈夫曼树的思想其实就是贪">
+<meta name="twitter:title" content="HafumanTree">
+<meta name="twitter:description" content="## 目录  哈夫曼树的构造 哈夫曼编码的构造   哈夫曼树的构造首先给出树的几个概念：  路径：从树种一个结点到另一个结点之间的分支构成这两个结点之间的路径，路径上的分支数目称作路径长度。 树的路径长度：从树根到每一个结点的路径长度之和。 结点的带权路径长度：为从该结点到树根的之间的路径长度与结点上权的成绩。 树的带权路径长度：为数中所有叶子结点的带权路径长度之和。     构建哈夫曼树的思想">
 <meta name="twitter:image" content="https://img-blog.csdn.net/20180917162949689?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p4enh6eDAxMTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
 
 
@@ -110,7 +111,7 @@
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -124,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/09/19/哈夫曼树和哈夫曼编码总结/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/19/HafumanTree/"/>
 
 
 
 
 
-  <title> | 郑鑫的博客</title>
+  <title>HafumanTree | 郑鑫的博客</title>
   
 
 
@@ -143,7 +144,7 @@
 </head>
 
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -191,7 +192,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
-            Home
+            首页
           </a>
         </li>
       
@@ -201,7 +202,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
-            About
+            关于
           </a>
         </li>
       
@@ -211,7 +212,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
-            Tags
+            标签
           </a>
         </li>
       
@@ -221,7 +222,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
-            Categories
+            分类
           </a>
         </li>
       
@@ -231,7 +232,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
-            Archives
+            归档
           </a>
         </li>
       
@@ -268,7 +269,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/19/哈夫曼树和哈夫曼编码总结/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/19/HafumanTree/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zxin">
@@ -285,7 +286,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">HafumanTree</h1>
         
 
         <div class="post-meta">
@@ -295,9 +296,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-19T21:05:15+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-19T22:52:10+08:00">
                 2018-09-19
               </time>
             
@@ -335,7 +336,8 @@
       
 
       
-        <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
+        <p>﻿## 目录</p>
+<ul>
 <li>哈夫曼树的构造</li>
 <li>哈夫曼编码的构造</li>
 </ul>
@@ -386,6 +388,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/哈夫曼树/" rel="tag"># 哈夫曼树</a>
+          
+        </div>
       
 
       
@@ -458,10 +466,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
+            站点概览
           </li>
         </ul>
       
@@ -486,13 +494,22 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>
@@ -538,7 +555,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#目录"><span class="nav-number">1.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#哈夫曼树的构造"><span class="nav-number">2.</span> <span class="nav-text">哈夫曼树的构造</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#哈夫曼编码的构造"><span class="nav-number">2.1.</span> <span class="nav-text">哈夫曼编码的构造</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#哈夫曼树的构造"><span class="nav-number">1.</span> <span class="nav-text">哈夫曼树的构造</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#哈夫曼编码的构造"><span class="nav-number">1.1.</span> <span class="nav-text">哈夫曼编码的构造</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -568,7 +585,7 @@
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
@@ -576,7 +593,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
 
 
 
@@ -750,7 +767,7 @@
 
   
 
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</body>
 </html>
 <!-- 页面点击小红心 -->
 <script type="text/javascript" src="/js/src/clicklove.js"></script>
