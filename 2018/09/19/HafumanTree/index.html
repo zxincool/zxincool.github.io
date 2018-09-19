@@ -77,13 +77,13 @@
 
 
 
-<meta name="description" content="##目录  哈夫曼树的构造 哈夫曼编码的构造   哈夫曼树的构造首先给出树的几个概念：  路径：从树中一个结点到另一个结点之间的分支构成这两个结点之间的路径，路径上的分支数目称作路径长度。 树的路径长度：从树根到每一个结点的路径长度之和。 结点的带权路径长度：为从该结点到树根的之间的路径长度与结点上权的成绩。 树的带权路径长度：为数中所有叶子结点的带权路径长度之和。     构建哈夫曼树的思想其实">
+<meta name="description" content="目录 哈夫曼树的构造 哈夫曼编码的构造   哈夫曼树的构造首先给出树的几个概念：  路径：从树中一个结点到另一个结点之间的分支构成这两个结点之间的路径，路径上的分支数目称作路径长度。 树的路径长度：从树根到每一个结点的路径长度之和。 结点的带权路径长度：为从该结点到树根的之间的路径长度与结点上权的成绩。 树的带权路径长度：为数中所有叶子结点的带权路径长度之和。     构建哈夫曼树的思想其实就是贪">
 <meta name="keywords" content="哈夫曼树">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HafumanTree">
 <meta property="og:url" content="http://yoursite.com/2018/09/19/HafumanTree/index.html">
 <meta property="og:site_name" content="郑鑫的博客">
-<meta property="og:description" content="##目录  哈夫曼树的构造 哈夫曼编码的构造   哈夫曼树的构造首先给出树的几个概念：  路径：从树中一个结点到另一个结点之间的分支构成这两个结点之间的路径，路径上的分支数目称作路径长度。 树的路径长度：从树根到每一个结点的路径长度之和。 结点的带权路径长度：为从该结点到树根的之间的路径长度与结点上权的成绩。 树的带权路径长度：为数中所有叶子结点的带权路径长度之和。     构建哈夫曼树的思想其实">
+<meta property="og:description" content="目录 哈夫曼树的构造 哈夫曼编码的构造   哈夫曼树的构造首先给出树的几个概念：  路径：从树中一个结点到另一个结点之间的分支构成这两个结点之间的路径，路径上的分支数目称作路径长度。 树的路径长度：从树根到每一个结点的路径长度之和。 结点的带权路径长度：为从该结点到树根的之间的路径长度与结点上权的成绩。 树的带权路径长度：为数中所有叶子结点的带权路径长度之和。     构建哈夫曼树的思想其实就是贪">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://img-blog.csdn.net/20180917162949689?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p4enh6eDAxMTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
 <meta property="og:image" content="https://img-blog.csdn.net/20180917163338269?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p4enh6eDAxMTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
@@ -91,10 +91,10 @@
 <meta property="og:image" content="https://img-blog.csdn.net/20180917164844271?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p4enh6eDAxMTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
 <meta property="og:image" content="https://img-blog.csdn.net/20180917181139872?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p4enh6eDAxMTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
 <meta property="og:image" content="https://img-blog.csdn.net/20180917180525113?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p4enh6eDAxMTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
-<meta property="og:updated_time" content="2018-09-19T15:25:42.666Z">
+<meta property="og:updated_time" content="2018-09-19T15:38:01.874Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HafumanTree">
-<meta name="twitter:description" content="##目录  哈夫曼树的构造 哈夫曼编码的构造   哈夫曼树的构造首先给出树的几个概念：  路径：从树中一个结点到另一个结点之间的分支构成这两个结点之间的路径，路径上的分支数目称作路径长度。 树的路径长度：从树根到每一个结点的路径长度之和。 结点的带权路径长度：为从该结点到树根的之间的路径长度与结点上权的成绩。 树的带权路径长度：为数中所有叶子结点的带权路径长度之和。     构建哈夫曼树的思想其实">
+<meta name="twitter:description" content="目录 哈夫曼树的构造 哈夫曼编码的构造   哈夫曼树的构造首先给出树的几个概念：  路径：从树中一个结点到另一个结点之间的分支构成这两个结点之间的路径，路径上的分支数目称作路径长度。 树的路径长度：从树根到每一个结点的路径长度之和。 结点的带权路径长度：为从该结点到树根的之间的路径长度与结点上权的成绩。 树的带权路径长度：为数中所有叶子结点的带权路径长度之和。     构建哈夫曼树的思想其实就是贪">
 <meta name="twitter:image" content="https://img-blog.csdn.net/20180917162949689?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p4enh6eDAxMTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
 
 
@@ -334,6 +334,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/09/19/HafumanTree/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/09/19/HafumanTree/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -358,8 +368,7 @@
       
 
       
-        <p>##目录</p>
-<ul>
+        <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
 <li>哈夫曼树的构造</li>
 <li>哈夫曼编码的构造</li>
 </ul>
@@ -462,6 +471,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
 
   
 
@@ -586,7 +602,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#哈夫曼树的构造"><span class="nav-number">1.</span> <span class="nav-text">哈夫曼树的构造</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#哈夫曼编码的构造"><span class="nav-number">1.1.</span> <span class="nav-text">哈夫曼编码的构造</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#目录"><span class="nav-number">1.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#哈夫曼树的构造"><span class="nav-number">2.</span> <span class="nav-text">哈夫曼树的构造</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#哈夫曼编码的构造"><span class="nav-number">2.1.</span> <span class="nav-text">哈夫曼编码的构造</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -770,6 +786,43 @@
 
 
 
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+        	id: '1537368730000',
+            owner: 'zxincool',
+            repo: 'https://github.com/zxincool/gitment.git',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '7c2061fe9b47b826031a16513d2f5aebde5ab39b',
+            
+                client_id: 'cbb5bced84073c337ee3'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
 
 
 
