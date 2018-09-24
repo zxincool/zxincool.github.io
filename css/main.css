@@ -1823,7 +1823,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #264f71;
+  background: #1affff;
 }
 .site-author-image {
   display: block;
@@ -3252,5 +3252,5 @@ body {
   background-attachment: fixed;
 }
 .main-inner {
-  opacity: 0.67;
+  opacity: 0.8;
 }
