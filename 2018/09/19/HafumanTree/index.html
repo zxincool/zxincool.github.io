@@ -77,13 +77,13 @@
 
 
 
-<meta name="description" content="目录 哈夫曼树的构造 哈夫曼编码的构造   哈夫曼树的构造首先给出树的几个概念：  路径：从树中一个结点到另一个结点之间的分支构成这两个结点之间的路径，路径上的分支数目称作路径长度。 树的路径长度：从树根到每一个结点的路径长度之和。 结点的带权路径长度：为从该结点到树根的之间的路径长度与结点上权的成绩。 树的带权路径长度：为数中所有叶子结点的带权路径长度之和。     构建哈夫曼树的思想其实就是贪">
+<meta name="description" content="目录 哈夫曼树的构造 哈夫曼编码的构造">
 <meta name="keywords" content="哈夫曼树">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HafumanTree">
 <meta property="og:url" content="http://yoursite.com/2018/09/19/HafumanTree/index.html">
 <meta property="og:site_name" content="郑鑫的博客">
-<meta property="og:description" content="目录 哈夫曼树的构造 哈夫曼编码的构造   哈夫曼树的构造首先给出树的几个概念：  路径：从树中一个结点到另一个结点之间的分支构成这两个结点之间的路径，路径上的分支数目称作路径长度。 树的路径长度：从树根到每一个结点的路径长度之和。 结点的带权路径长度：为从该结点到树根的之间的路径长度与结点上权的成绩。 树的带权路径长度：为数中所有叶子结点的带权路径长度之和。     构建哈夫曼树的思想其实就是贪">
+<meta property="og:description" content="目录 哈夫曼树的构造 哈夫曼编码的构造">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://img-blog.csdn.net/20180917162949689?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p4enh6eDAxMTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
 <meta property="og:image" content="https://img-blog.csdn.net/20180917163338269?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p4enh6eDAxMTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
@@ -91,10 +91,10 @@
 <meta property="og:image" content="https://img-blog.csdn.net/20180917164844271?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p4enh6eDAxMTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
 <meta property="og:image" content="https://img-blog.csdn.net/20180917181139872?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p4enh6eDAxMTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
 <meta property="og:image" content="https://img-blog.csdn.net/20180917180525113?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p4enh6eDAxMTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
-<meta property="og:updated_time" content="2018-09-19T15:38:01.874Z">
+<meta property="og:updated_time" content="2018-09-24T15:10:02.343Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HafumanTree">
-<meta name="twitter:description" content="目录 哈夫曼树的构造 哈夫曼编码的构造   哈夫曼树的构造首先给出树的几个概念：  路径：从树中一个结点到另一个结点之间的分支构成这两个结点之间的路径，路径上的分支数目称作路径长度。 树的路径长度：从树根到每一个结点的路径长度之和。 结点的带权路径长度：为从该结点到树根的之间的路径长度与结点上权的成绩。 树的带权路径长度：为数中所有叶子结点的带权路径长度之和。     构建哈夫曼树的思想其实就是贪">
+<meta name="twitter:description" content="目录 哈夫曼树的构造 哈夫曼编码的构造">
 <meta name="twitter:image" content="https://img-blog.csdn.net/20180917162949689?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p4enh6eDAxMTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
 
 
@@ -373,6 +373,7 @@
 <li>哈夫曼编码的构造</li>
 </ul>
 <hr>
+<a id="more"></a>
 <h2 id="哈夫曼树的构造"><a href="#哈夫曼树的构造" class="headerlink" title="哈夫曼树的构造"></a>哈夫曼树的构造</h2><p>首先给出树的几个概念：</p>
 <ul>
 <li>路径：从树中一个结点到另一个结点之间的分支构成这两个结点之间的路径，路径上的分支数目称作<strong>路径长度</strong>。</li>
